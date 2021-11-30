@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>NES test Website :)</title>
+        <style>
+            body {
+                background-image: url('background.png');
+                color: rgb(255, 255, 255);
+                padding: 10px;
+                font-family: arial;
+            }
+            #all-contents {
+                max-width: 1500px;
+                margin: auto;
+            }
+        
+            /* navigation menu */
+            nav {
+                background: rgb(241, 221, 35);
+                margin: 0 auto;
+                display: flex;
+                padding: 10px;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                color: rgb(0, 0, 0);
+                flex: 1;
+                margin: 0;
+            }
+            #nav-ul {
+                list-style-image: none;
+            }
+            .nav-li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+        
+            /* main container area beneath menu */
+            main {
+                background: rgb(63, 11, 184);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar-img {
+                width: 200px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            #interests {
+                border: 4px silver ridge;
+                padding: 8px;
+            }
+            h2, h3 {
+                margin: 0px;
+            }
+        </style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>NES</title>
+		
+		<script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+		<script type="text/javascript" src="nes-embed.js"></script>
+		<script>window.onload = function(){nes_load_url("nes-canvas", "zelda.nes");}</script>
+    </head>
+    <body>
+        <!-- All content goes here -->
+        <div id="all-contents"> 
+            <nav>
+                <h1>Ethan's Website</h1>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                    <a href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-li">
+                    <a href="portfolio.html"> Portfolio </a>
+                    </li>
+                </ul>
+            </nav>
+			
+            <main>
+                <!-- Sidebar section -->
+                <div class= "sidebar">
+                    <img class= "sidebar-img" src="image.jpg" alt="temporary" width="150" height="160">
+
+                </div>
+				<div style="margin: auto; width: 75%;">
+					<canvas id="nes-canvas" width="256" height="240" style="width: 56%"/>
+				</div>
+				<p>DPad: Arrow keys<br/>Start: Return, Select: Tab<br/>A Button: A, B Button: S</p>	
+                
+                    
+                   
+            
+            </main>
+        </div>
+    </body>
+</html>
